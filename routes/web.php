@@ -7,6 +7,8 @@ use Inertia\Inertia;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\BrandController;
 use App\Http\Controllers\Backend\ProductController;
+use App\Http\Controllers\Backend\CheckoutController;
+use App\Http\Controllers\Backend\OrderController;
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
@@ -28,6 +30,10 @@ Route::middleware('auth')->group(function () {
     Route::resource('categories', CategoryController::class);
     Route::resource('brands', BrandController::class);
     Route::resource('products', ProductController::class);
+    Route::resource('checkout', CheckoutController::class);
+    Route::resource('orders', OrderController::class);
+
+
 });
 
 require __DIR__.'/auth.php';
