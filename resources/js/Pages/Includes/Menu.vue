@@ -31,6 +31,11 @@
                                 aria-current="page">
                             Checkout</Link>
                         </li>
+                        <li>
+                            <Link :href="route('orders.index')" class="text-gray-900 dark:text-white hover:underline"
+                                aria-current="page">
+                            Orders</Link>
+                        </li>
                     </ul>
                 </div>
             </div>

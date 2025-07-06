@@ -6,6 +6,7 @@ use App\Http\Controllers\Api\ProductsController;
 use App\Http\Controllers\Api\BrandsController;
 use App\Http\Controllers\Api\CategoriesController;
 use App\Http\Controllers\Api\OrderController;
+use App\Http\Controllers\Api\PaymentController;
 
 
 
@@ -18,3 +19,4 @@ Route::apiResource('brands', BrandsController::class);
 Route::apiResource('categories', CategoriesController::class);
 Route::post('orders', [OrderController::class, 'store']);
 Route::get('orders', [OrderController::class, 'index']);
+Route::resource('payment', PaymentController::class);
